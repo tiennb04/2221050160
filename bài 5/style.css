@@ -1,10 +1,12 @@
 body {
     margin: 0;
+    background-color: lightgray;
 }
 ul {
     margin: 0;
 }
 .danhmuc{
+    width: auto;
     background-color: #2fa4e7;
     padding: 20px;
 }
@@ -25,8 +27,8 @@ ul {
     color: gray;
 }
 .logo {
-    height:100px;
-    background-color: gray;
+    width: 100%;
+    height: 100px;
 }
 main {
     display: flex;
@@ -37,8 +39,12 @@ main {
 }
 .noidung-phai {
     height:1000px;
-    background-color: chocolate;
     width: 20%;
+}
+.tintuc{
+    background-color: white;
+    margin: 0px 5px 5px 0px;
+    border-radius: 10px 10px 3px 3px;
 }
 .tieude {
     background-color: #2fa4e7;
@@ -50,21 +56,134 @@ main {
 }
 .tintuc-danhsach {
     display: flex;
-    background-color: gray;
     justify-content: space-between; 
 }
 .baiviet {
     height : 200px;
-    background-color: black;
+    background-color: gray;
     width: 32%;
+    position:relative;
+    margin : 5px;
+    cursor : pointer;
 }
 .baiviet-dau {
-    display : top;
+    position:absolute;
     height : 10%;
-    background-color: blue;
+    width : 100%;
+    text-align: center;
+    background-color: #85c0e1;
+    cursor : pointer;
 }
 .baiviet-giua {
-    display : flex;
-    height : 20%;
+    position: absolute;
+    bottom: 0px;
+    height: 15%;
+    width:100%;
+    background-color: #85c0e1;
+    text-align: center;
+    cursor: pointer;
+}
+.baiviet-noidung {
+    width: 100%;
+    text-align: center;
+    cursor : pointer;
+    overflow: hidden;
+}
+.baiviet-noidung img {
+    width: 100%;
+    height: 200px;
+}
+.thongbao{
+    width: 99,5%;
+    margin: 15px 5px 5px 2px;
     background-color: white;
+    border-radius: 5px 5px 2px 2px;
+
+}
+.thongbao-danhsach{
+    display: flex;
+}
+.tieude-thongbao{
+    background-color: #2fa4e7;
+    color:white;
+    font-size: large;
+    padding:10px;
+    border-radius: 5px 5px 0px 0px;
+
+}
+.thongbao-pic{
+    width: 30%;
+    background-color: white;
+    
+    margin: 5px 5px 5px 40px;
+    
+}
+.thongbao-img img{
+    width: 100%;
+}
+.time-noidung{
+    font-size: small;
+    color: grey;
+    text-align: right;
+}
+.note-noidung{
+    text-decoration: none;
+    color: #2fa4e7;
+    font-weight: bold;
+    font-size: medium;
+    margin: 0px 5px 5px 0px;
+    text-align: left;
+}
+.thongbao-list{
+    width:100%;
+    background-color: white;
+    height: auto;
+    margin:5px;
+}
+.thongbao-list ul{
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid rgb(219, 228, 235);
+    border-left:1px solid rgb(219, 228, 235) ;
+}
+.thongbao-list li{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px 5px 0px;
+    
+}
+.thongbao-list i{
+    color: #868E96;
+    font-size: small;
+}
+
+.huongdan{
+    margin:15px 10px 15px 15px;
+}
+.tieude-huongdan{
+    border-radius: 5px 5px 0px 0px;
+    background-color: #2fa4e7;;
+    padding:10px;
+    font-size: large;   
+    color:white;
+}
+.huongdan-list{
+    width: 100%;
+    background-color: white;
+    height:auto;
+    margin:0px;
+}
+.huongdan-list ul{
+    list-style: none;
+    padding: 10px;
+}
+.huongdan-list li{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px 5px 0px;
+    
+}
+.huongdan-list i{
+    color: #868E96;
+    font-size: small;
 }
