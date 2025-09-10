@@ -35,10 +35,8 @@ main {
 }
 .noidung-trai {
     width: 80%;
-    border-radius: 10px;
 }
 .noidung-phai {
-    height:1000px;
     width: 20%;
 }
 .tintuc{
@@ -187,3 +185,107 @@ main {
     color: #868E96;
     font-size: small;
 }
+.box-dangnhap{
+    width: 100%;
+    height: 35%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0px 5px 15px 5px;
+}
+.dangnhap{
+    width: auto;
+    background-color: #2fa4e7;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px   ;
+}
+#taikhoan, #matkhau{
+    width: 85%;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    justify-content: center;
+}
+.quen{
+    color: #2fa4e7;
+    font-size: medium;
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    margin: 0px 10px 0px 0px ;
+}   
+.submit{
+    width: 95%;
+    background-color: #2fa4e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 5px;
+}
+.submit-2{
+    width: 95%;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    margin: 5px;
+}
+.QR {
+    width: 100%;
+    height: 65%;
+    border: none;
+    background-color: white;
+    margin-top: 50px;
+    text-align: center;
+    margin: 0px 5px 5px 5px ;
+    border-radius: 5px;
+    
+}
+.qr-img img{
+    width: 90%;
+    height: 230px;
+    margin: 10px 0px 10px 10px;
+}
+.b{
+    color: white;
+    background-color: #2fa4e7;
+    font-weight: bold;
+    font-size: medium;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px  ;
+}
+.footer{
+    text-align: center;
+    background-color: #2fa4e7;
+    color: white;
+    padding: 20px;
+    font-size: small;
+    margin-top: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: grey;
+    text-decoration: none; 
+ }
+ .quen a:hover{
+    color: #a3d5f0;
+    text-decoration: none; 
+ }
+ .quen a{
+    text-decoration: none;
+    color: #2fa4e7;
+ }
