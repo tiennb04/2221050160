@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        document.writeln("Hello World!" + "<br>");
+
+        //de khai bao bien js dung let hoac var
+        //cu phap: let Ten bien = Gia tri;
+        //de loi chuoi JS dung dau +
+        let HoTen = "Nguyen Ba Tien" + "<br>";
+
+        document.writeln(HoTen);
+
+        // Tăng 1: ++
+        // Giảm 1: --
+        //KetQua = SoThuNhat / SoThuHai;
+        //SoThuNhat %= 3;
+        //== != === !== < > <= >=
+
+        let SoThuNhat = 5;
+        let SoThuHai = "5";
+        let KetQua;
+        
+        let ThongTinSinhVien = {
+            HoTen: "Nguyen Ba Tien",
+            mssv: "2221050160",
+            GioiTinh: true,
+            Tuoi: 21,
+            Lop: "DCCTCT67_08C"
+        }
+
+        let DiaChi = {
+            ThanhPho: "Lào Cai",
+            Phuong: "Cốc Lếu",
+            Duong: "Đặng Trần Côn",
+            SoNha: 123
+        }
+        
+        document.writeln("Xin chào bạn:" + ThongTinSinhVien.HoTen + ", " + ThongTinSinhVien.Tuoi + " Tuổi, "
+            + "Địa Chỉ: " + DiaChi.SoNha +", " +  DiaChi.Duong +", " + DiaChi.Phuong + ", " + DiaChi.ThanhPho + " "   
+        ); 
+
+        let namnay="2025"
+        document.writeln("Bạn "+ ThongTinSinhVien.HoTen + " Sinh năm " + (namnay - ThongTinSinhVien.Tuoi))
+
+    </script>
+    
+</body>
+</html>

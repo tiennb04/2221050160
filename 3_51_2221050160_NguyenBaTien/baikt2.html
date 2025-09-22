@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baikt2</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      background: white;
+      color: black;
+    }
+
+    .sidebar {
+      width: 200px;
+      background: white;
+      padding: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+   
+    .main {
+      padding: 40px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 200px);
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+     box-shadow: 0 1px 5px black;
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">API Platform</a></li>
+      <li><a href="#">API Pricing</a></li>
+      <li><a href="#">Codex</a></li>
+      <li><a href="#">Open Models</a></li>
+      <li><a href="#">Community</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="cards">
+      <div class="card">
+        <h3>Permissive license</h3>
+        <p>These models are supported by the Apache</p>
+      </div>
+      <div class="card">
+        <h3>Designed for agentic tasks</h3>
+        <p>Leverage powerful instruction following and tool </p>
+      </div>
+      <div class="card">
+        <h3>Deeply customizable</h3>
+        <p>Adjust the reasoning effort to low, medium </p>
+      </div>
+      <div class="card">
+        <h3>Full chain-of-thought</h3>
+        <p>Access the full chain-of-thought for easier </p>
+      </div>
+    </div>
+
+    <h2>Model performance</h2>
+  </div>
+</body>
+</html>
