@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThongTinDonHang</title>
+</head>
+<body>
+    <script>
+        let DonHang={
+            MaDonHang:"0123456789",
+            ThongTinKhachHang:{
+                HoTen:"Nguyen Ba Tien",
+                Sdt:"0329123456",
+                TTThanhVienThanThiet:true,
+            },
+            DanhSachSP:{
+                CaPhe:{
+                    MaSanPham:"01",
+                    TenShanPham:"CaPhe",
+                    SoLuong:"199",
+                    GiaTien:"15000",
+                },
+                MatCha:{
+                    MaSanPham:"02",
+                    TenShanPham:"MatCha",
+                    SoLuong:"299",
+                    GiaTien:"30000",
+                },
+                TraSua:{
+                    MaSanPham:"03",
+                    TenShanPham:"TraSua",
+                    SoLuong:"399",
+                    GiaTien:"35000",
+                },
+            },
+            TrangThaiThanhToan:true,
+            DiaChiDonHang:"HaNoi",
+        }
+        document.write(DonHang.DanhSachSP.MatCha.TenShanPham)
+        TongSoTien_CaPhe=DonHang.DanhSachSP.CaPhe.SoLuong * DonHang.DanhSachSP.CaPhe.GiaTien
+        TongSoTien_MatCha=DonHang.DanhSachSP.MatCha.SoLuong * DonHang.DanhSachSP.MatCha.GiaTien
+        TongSoTien_TraSua=DonHang.DanhSachSP.TraSua.SoLuong * DonHang.DanhSachSP.TraSua.GiaTien
+        TongSoTienDonHang=TongSoTien_CaPhe+TongSoTien_MatCha+TongSoTien_TraSua
+        document.writeln(" Tong So Tien Don Hang: " + TongSoTienDonHang + "<br>");
+    
+        document.writeln("Do dai ma don hang: " + DonHang.MaDonHang.length + "<br>");
+        
+        //lay ra 1 ki tu trong chuoi
+        var myString = "Hello";
+        document.writeln(myString[1]);
+
+        //cat chuoi
+        var myString = "Hello";
+        document.writeln(myString.slice(1,4));
+
+        //thay the chuoi
+        var myString = "Hello Tien";
+        document.writeln(myString.replace("Hello", "Hi"));
+
+        //doi chu hoa thanh chu thuong va ngc lai
+        var myString = "Hello TieN";
+        document.writeln(myString.toLocaleLowerCase())
+
+        //Tim kiem chuoi
+        var myString = "Hello Tien";
+        document.writeln(myString.indexOf("p"))
+
+        var myString = "Hello Tien";
+        document.writeln(myString.includes("e"))
+
+        //tach chuoi thanh mang
+        var myString = "Hello Tien";
+        document.writeln(myString.split(' '))
+
+        let DanhSach = ("Nguyen Van A", "Nguyen Thanh B", "Pham Thai C", "Duong Ngoc D");
+        document.writeln(DanhSach[1].startsWith("Nguyen"))
+
+        //kieu number, chuyen chuoi thanh 1 so
+        let so = "123";
+        document.writeln(typeof (so));
+        document.writeln(typeof (Number(so)));
+
+        //Dinh dang so thap phan
+        var pi = 3.14159;
+        document.writeln(pi.toFixed(2))
+
+        //Kiem tra so
+        //isNaN() Kiem tra xem 1 gia tri co phai NaN k
+        //inFinter() Kiem tra xem 1 gia tri co phai so huu han hay k
+
+        let ToDay = new Date('2023-09-23')
+        document.writeln("<br>" + ToDay)
+        document.writeln("<br>" + ToDay.getDate())
+    </script>
+</body>
+</html>
