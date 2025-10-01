@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <title>Bai 9</title>
+</head>
+<body>
+    <script>
+        // Mảng
+        let arr =[1,2,3,4,5,"a","b","c",5]
+
+        document.writeln(arr.length);
+
+        // Lấy một phần tử trong mảng
+        document.writeln(arr[3]);
+
+        // IndexOf():Trả về vị trí của phần tử trong mảng
+        document.writeln(arr.indexOf(3))
+        //lastIndexOf():trả về vị trí cuối cung của phần tử trong mảng
+        document.writeln(arr.lastIndexOf(5))
+
+        //Array.isArray(a): Kiểm tra mảng
+        document.writeln(Array.isArray(arr))
+
+        let a,b,c,d
+        a = [1,2,3];
+        b="Js"
+        c = [42,"Javascript"]
+        d = a.concat(b,c) //Concat :nối chuỗi và mảng
+        d.push("Tien") // Đẩy thêm 1 phần tử v ào cuối mảng
+        document.writeln(d)
+        document.writeln(Array.isArray(d))
+        
+        document.writeln(d.join(" ")) // 
+        
+        e= d.pop()
+        //document.writeln(e.pop()) // Lấy ra phần tử cuối cùng trong mảng
+
+        document.writeln(d.reverse()) // reverse : Đảo phẩn tử của mảng
+
+        //Shift : Xóa phần tử đầu tiên arr.shift()
+        //unshift: Thêm phần tử vào đầu mảng arr.unshift(0)
+
+        d[3]=9 // Thay thế phần tử trong mảng
+        document.writeln(d)
+
+        //Các câu lệnh điều kiện
+        // If-else
+        let toDay= new Date()
+        let now=toDay.getHours()
+        if(now < 10){
+            document.writeln("Chào bủi sáng");
+        } else if(now>=10 && now<14){
+            document.writeln('Chào buổi trưa')
+        } else if(now>=14 && now<17){
+            document.writeln('Chào buổi chiều')}
+        else if(now>=17 && now<22){
+            document.writeln('Chào buổi tối')}
+        else{
+            document.writeln('Chào buổi đêm')}
+        
+        let n="100000000000000000000005";
+        document.writeln(n[n.length -1])
+        let socuoi= parseInt(n[n.length -1])
+        typeof(Number(socuoi))
+    
+        if (socuoi%2==0){
+             document.writeln('n là số chẵn')
+        }
+        else{
+            document.writeln('n là số lẻ')
+        }
+    
+    </script>
+</body>
+</html>
