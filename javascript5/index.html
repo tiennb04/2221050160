@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bài 11</h1>
+    <!-- Tạo hàm JS tính điểm của sinh viên dựa vào 3 điểm A,B,C 
+     Điểm tống = A*0.6 +B*0.3 +C*0.1 -->
+     <h2>Tính điểm</h2>
+     <div>
+       Điểm A: <input  type="number" id="diemA" placeholder="Nhập điểm A">
+     </div>
+     <div>
+        Điểm B:<input type="number" id="diemB" placeholder="Nhập điểm B">
+     </div>
+     <div>
+       Điểm C: <input type="number" id="diemC" placeholder="Nhập điểm C">
+     </div>
+     <div>
+        <button onclick="xemKetQua()">Tính điểm</button>
+     </div>
+     <div>
+        
+        Kết Quả : <input type="text" id="ketQua" >
+     </div>
+    <script>
+
+        // function diemTong(A,B,C){
+        //     if( A<0||A>10||B<0||B>10||C<0||C>10 ){
+        //     document.writeln("Nhap lai diem!!!")
+        //     }
+        //     else if( isNaN(A) || isNaN(B) || isNaN(C)){
+        //         document.writeln("Nhap lai diem!!")
+        //     }
+        //     else{
+        //     diemTong=A*0.6 +B*0.3 +C*0.1
+        //     document.writeln("Diem tong :"+ diemTong)
+        //     }
+        //  }
+        function xemKetQua(){
+            let diemA=parseFloat(document.getElementById('diemA').value)
+            let diemB=parseFloat(document.getElementById('diemB').value)
+            let diemC=parseFloat(document.getElementById('diemC').value)
+            let ketQua=document.getElementById('ketQua')
+            
+            if (isNaN(diemA) || diemA < 0 || diemA > 10) {
+                document.writeln( 'Nhập lại điểm A ')
+                return;
+            }
+            if (isNaN(diemB) || diemB < 0 || diemB > 10) {
+                document.writeln( 'Nhập lại điểm B ')
+                return;
+            }
+            if (isNaN(diemC) || diemC < 0 || diemC > 10) {
+                document.writeln( 'Nhập lại điểm C')
+                return;
+            }            
+            let tong=diemA*0.6+diemB*0.3+diemC*0.1
+            
+            let diemChu=""
+            if (tong > 9 && tong <= 10) diemchu = "A+";
+            else if 
+                (tong >= 8.5) diemchu = "A";
+            else if 
+                (tong >= 8.0) diemchu = "B+";
+            else if 
+                (tong >= 7.0) diemchu = "B";
+            else if 
+                (tong >= 6.0) diemchu = "C";
+            else if 
+                (tong >= 5.0) diemchu = "D";
+            else diemchu = "F";
+            
+            ketQua.value = `Điểm: ${tong.toFixed(2)} (${diemchu})`;
+
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính chỉ số BMI</title>
+  <style>
+    body {
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .bmi-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    img {
+      margin-top: 15px;
+      width: 150px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tính chỉ số BMI</h1>
+  <div class="bmi-box">
+    <label for="weight">Cân nặng (kg):</label><br>
+    <input type="number" id="weight" placeholder="Nhập cân nặng"><br>
+
+    <label for="height">Chiều cao (m):</label><br>
+    <input type="number" id="height" placeholder="Nhập chiều cao" step="0.01"><br>
+
+    <button onclick="calculateBMI()">Kiểm tra chỉ số BMI</button>
+
+    <div id="result"></div>
+    <img id="bmiImage" src="" alt="">
+  </div>
+
+  <script>
+    function calculateBMI() {
+      const weight = parseFloat(document.getElementById("weight").value);
+      const height = parseFloat(document.getElementById("height").value);
+      const result = document.getElementById("result");
+      const bmiImage = document.getElementById("bmiImage");
+
+
+      // Kiểm tra hợp lệ
+      if (!weight || !height || weight <= 0 || height <= 0) {
+        alert("Vui lòng nhập đúng cân nặng và chiều cao hợp lệ!");
+        return;
+      }
+
+      const bmi = weight / (height * height);
+      let status = "";
+      let imgSrc = "";
+
+      if (bmi < 18.5) {
+        status = "Thiéu cân";
+        imgSrc = "thieu.png";
+      } 
+      else if (bmi < 24.9) {
+        status = "Bình thường";
+        imgSrc = "binhthuong.png";
+      } 
+      else if (bmi < 29.9) {
+        status = "Thừa cân";
+        imgSrc = "thua.png";
+      } 
+      else if (bmi < 39.9) {
+        status = "Béo phì cấp độ 1";
+        imgSrc = "beocapdo1.png";
+      } 
+      else {
+        status = "Béo nặng";
+        imgSrc = "beonang.png";
+      }
+
+      result.textContent = `Chỉ số BMI của bạn là ${bmi.toFixed(2)} (${status})`;
+      bmiImage.src = imgSrc;
+    }
+  </script>
+</body>
+</html>
